@@ -1,9 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Test</title>
+  <title>NeroxWorks | Digital Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(-45deg, #0f172a, #1e293b, #111827, #0f172a);
+      background-size: 400% 400%;
+      animation: gradientMove 10s ease infinite;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 2s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 20px;
+      max-width: 600px;
+      color: #cbd5e1;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 15px 35px;
+      font-size: 16px;
+      background: #38bdf8;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0ea5e9;
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #38bdf8;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+  </style>
 </head>
+
 <body>
-<h1>Site Çalışıyor 🚀</h1>
+
+  <div class="hero">
+    <h1>NeroxWorks</h1>
+    <p>Modern Web Design, Creative Digital Solutions & Professional Visual Production</p>
+    <button class="btn">Projeleri Gör</button>
+  </div>
+
+  <footer>
+    © 2026 NeroxWorks | Digital Studio
+  </footer>
+
 </body>
 </html>
