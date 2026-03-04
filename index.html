@@ -13,12 +13,11 @@ body{
   color:white;
 }
 
-/* HEADER */
 header{
   position:fixed;
   top:0;
   width:100%;
-  background:rgba(15,23,42,0.9);
+  background:rgba(15,23,42,0.95);
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -28,16 +27,13 @@ header{
 
 header h2{
   margin:0;
-  font-weight:600;
-  letter-spacing:1px;
 }
 
-header .phone{
+.phone{
   color:#38bdf8;
   font-weight:bold;
 }
 
-/* HERO */
 .hero{
   height:100vh;
   display:flex;
@@ -49,7 +45,7 @@ header .phone{
 }
 
 .hero h1{
-  font-size:60px;
+  font-size:55px;
   margin-bottom:20px;
 }
 
@@ -59,9 +55,8 @@ header .phone{
 }
 
 .btn{
-  margin-top:30px;
-  padding:15px 40px;
-  background:#38bdf8;
+  margin-top:20px;
+  padding:14px 35px;
   border:none;
   border-radius:30px;
   font-size:16px;
@@ -69,12 +64,16 @@ header .phone{
   transition:0.3s;
 }
 
-.btn:hover{
-  background:#0ea5e9;
-  transform:scale(1.1);
+.call-btn{
+  background:#22c55e;
+  color:white;
 }
 
-/* SERVICES */
+.call-btn:hover{
+  background:#16a34a;
+  transform:scale(1.08);
+}
+
 .services{
   padding:80px 20px;
   text-align:center;
@@ -83,7 +82,6 @@ header .phone{
 
 .services h2{
   margin-bottom:50px;
-  font-size:36px;
 }
 
 .cards{
@@ -107,29 +105,17 @@ header .phone{
 }
 
 .card h3{
-  margin-top:0;
   color:#38bdf8;
 }
 
-/* WHY US */
-.why{
-  padding:80px 20px;
+footer{
+  background:#111827;
   text-align:center;
-  background:#0f172a;
+  padding:20px;
+  color:#94a3b8;
 }
 
-.why h2{
-  margin-bottom:40px;
-}
-
-.why p{
-  max-width:700px;
-  margin:auto;
-  color:#cbd5e1;
-  line-height:1.6;
-}
-
-/* WHATSAPP */
+/* FLOATING BUTTONS */
 .whatsapp{
   position:fixed;
   bottom:20px;
@@ -153,12 +139,27 @@ header .phone{
   transform:scale(1.15);
 }
 
-/* FOOTER */
-footer{
-  background:#111827;
-  text-align:center;
-  padding:20px;
-  color:#94a3b8;
+.call-float{
+  position:fixed;
+  bottom:100px;
+  right:20px;
+  background:#22c55e;
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:28px;
+  text-decoration:none;
+  color:white;
+  box-shadow:0 0 20px rgba(0,0,0,0.4);
+  transition:0.3s;
+  z-index:1000;
+}
+
+.call-float:hover{
+  transform:scale(1.15);
 }
 </style>
 </head>
@@ -173,7 +174,11 @@ footer{
 <section class="hero">
   <h1>Profesyonel Teknik Servis</h1>
   <p>Şofben Servisi • Beyaz Eşya Servisi</p>
-  <button class="btn">Hizmetlerimiz</button>
+
+  <a href="tel:05414146239">
+    <button class="btn call-btn">📞 Hemen Ara</button>
+  </a>
+
 </section>
 
 <section class="services">
@@ -194,18 +199,16 @@ footer{
   </div>
 </section>
 
-<section class="why">
-  <h2>Neden Polat Teknik?</h2>
-  <p>
-    Deneyimli ekibimiz ile hızlı, güvenilir ve müşteri memnuniyeti odaklı
-    teknik servis hizmeti sunuyoruz. Kaliteli işçilik ve uygun fiyat garantisi.
-  </p>
-</section>
-
 <footer>
   © 2026 Polat Teknik - Tüm Hakları Saklıdır
 </footer>
 
+<!-- FLOATING CALL -->
+<a href="tel:05414146239" class="call-float">
+📞
+</a>
+
+<!-- WHATSAPP -->
 <a href="https://wa.me/905414146239?text=Merhaba%20Polat%20Teknik%20ile%20iletişime%20geçmek%20istiyorum" class="whatsapp" target="_blank">
 💬
 </a>
