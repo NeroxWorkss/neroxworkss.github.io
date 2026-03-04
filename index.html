@@ -1,126 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-  <title>Polat Teknik</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polat Teknik</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(-45deg, #0f172a, #1e293b, #111827, #0f172a);
-      background-size: 400% 400%;
-      animation: gradientMove 10s ease infinite;
-      color: white;
-      overflow-x: hidden;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(-45deg, #0f172a, #1e293b, #111827, #0f172a);
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
+  color: white;
+  overflow: hidden;
+}
 
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
-    .ac-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 0;
-    }
+/* KLİMA ARKA PLAN */
+.ac-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
 
-    .ac {
-      position: absolute;
-      width: 80px;
-      opacity: 0.25;
-      animation: float 20s linear infinite;
-    }
+.ac {
+  position: absolute;
+  width: 110px;
+  opacity: 0.25;
+  animation: move 12s linear infinite;
+}
 
-    .ac1 { top: 10%; left: -100px; animation-duration: 25s; }
-    .ac2 { top: 50%; left: -150px; animation-duration: 30s; }
-    .ac3 { top: 80%; left: -200px; animation-duration: 35s; }
+.ac1 { top: 10%; left: -200px; animation-duration: 10s; }
+.ac2 { top: 35%; left: -250px; animation-duration: 12s; }
+.ac3 { top: 60%; left: -300px; animation-duration: 9s; }
+.ac4 { top: 80%; left: -150px; animation-duration: 11s; }
 
-    @keyframes float {
-      from { transform: translateX(0); }
-      to { transform: translateX(120vw); }
-    }
+@keyframes move {
+  from { transform: translateX(0); }
+  to { transform: translateX(130vw); }
+}
 
-    .hero {
-      position: relative;
-      z-index: 2;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      animation: fadeIn 2s ease forwards;
-      opacity: 0;
-    }
+/* ANA İÇERİK */
+.hero {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
+h1 {
+  font-size: 55px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
 
-    h1 {
-      font-size: 50px;
-      margin-bottom: 20px;
-      letter-spacing: 2px;
-    }
+p {
+  font-size: 20px;
+  color: #cbd5e1;
+}
 
-    p {
-      font-size: 20px;
-      max-width: 600px;
-      color: #cbd5e1;
-    }
+button {
+  margin-top: 30px;
+  padding: 15px 35px;
+  font-size: 16px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-    .btn {
-      margin-top: 30px;
-      padding: 15px 35px;
-      font-size: 16px;
-      background: #38bdf8;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #0ea5e9;
-      transform: scale(1.1);
-      box-shadow: 0 0 20px #38bdf8;
-    }
-
-    footer {
-      position: absolute;
-      bottom: 20px;
-      width: 100%;
-      text-align: center;
-      font-size: 14px;
-      color: #94a3b8;
-    }
-  </style>
+button:hover {
+  background: #0ea5e9;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #38bdf8;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="ac-container">
-    <img src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" class="ac ac1">
-    <img src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" class="ac ac2">
-    <img src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" class="ac ac3">
-  </div>
+<div class="ac-container">
+  <img src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" class="ac ac1">
+  <img src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" class="ac ac2">
+  <img src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" class="ac ac3">
+  <img src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" class="ac ac4">
+</div>
 
-  <div class="hero">
-    <h1>Polat Teknik</h1>
-    <p>Klima Montajı, Bakım ve Teknik Servis Hizmetleri</p>
-    <button class="btn">Hizmetlerimiz</button>
-  </div>
-
-  <footer>
-    © 2026 Polat Teknik
-  </footer>
+<div class="hero">
+  <h1>Polat Teknik</h1>
+  <p>Klima Montajı • Bakım • Teknik Servis</p>
+  <button>Hizmetlerimiz</button>
+</div>
 
 </body>
 </html>
