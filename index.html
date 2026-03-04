@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>NeroxWorks | Digital Studio</title>
+  <title>Polat Teknik</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -21,7 +21,35 @@
       100% { background-position: 0% 50%; }
     }
 
+    .ac-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .ac {
+      position: absolute;
+      width: 80px;
+      opacity: 0.08;
+      animation: float 20s linear infinite;
+    }
+
+    .ac1 { top: 10%; left: -100px; animation-duration: 25s; }
+    .ac2 { top: 50%; left: -150px; animation-duration: 30s; }
+    .ac3 { top: 80%; left: -200px; animation-duration: 35s; }
+
+    @keyframes float {
+      from { transform: translateX(0); }
+      to { transform: translateX(120vw); }
+    }
+
     .hero {
+      position: relative;
+      z-index: 2;
       height: 100vh;
       display: flex;
       flex-direction: column;
@@ -78,14 +106,20 @@
 
 <body>
 
+  <div class="ac-container">
+    <img src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" class="ac ac1">
+    <img src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" class="ac ac2">
+    <img src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" class="ac ac3">
+  </div>
+
   <div class="hero">
-   <h1>Polat Teknik</h1>
-    <p>Modern Web Design, Creative Digital Solutions & Professional Visual Production</p>
-    <button class="btn">Projeleri Gör</button>
+    <h1>Polat Teknik</h1>
+    <p>Klima Montajı, Bakım ve Teknik Servis Hizmetleri</p>
+    <button class="btn">Hizmetlerimiz</button>
   </div>
 
   <footer>
-    <title>Polat Teknik</title>
+    © 2026 Polat Teknik
   </footer>
 
 </body>
